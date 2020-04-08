@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interest Calculator</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+<script>
+
+let data = [
+    { principal: 2500, time: 1.8 },
+
+    { principal: 1000, time: 5 },
+
+    { principal: 3000,time: 1 },
+
+    { principal: 2000,time: 3 }
+
+];
+
+function interestCalculator(myArr){
+for (let i = 0; i < myArr.length; i++) {
+   if (myArr[i].principal >= 2500 && myArr[i].time < 3) {
+        myArr[i].rate = 3;}
+       
+    else if (myArr[i].principal >= 2500 && myArr[i].time >= 3) {
+        myArr[i].rate = 4;}
+       
+    else if (myArr[i].principal < 2500 || myArr[i].time <= 1) {
+        myArr[i].rate = 2;}
+       
+    else {
+        myArr[i].rate = 1;}
+
+    myArr[i].interest = myArr[i].principal * myArr[i].rate * myArr[i].time / 100 ;
+
+}
+let interestData = [myArr];
+interestData.push();
+console.log (interestData);
+return interestData;
+}
+
+interestCalculator(data);
+
+
+
+
+</script>
+
+</body>
+
+</html>
