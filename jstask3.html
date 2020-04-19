@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisibility Task</title>
+</head>
+<body>
+    
+<script>
+
+function divisible(para){
+    //create an array
+    var array = [];
+    //begin the loop
+    for(i=1; i <= para; i++){
+        //detect values divisble by 2,3 and 5
+        if(i % 2 === 0 && i % 3 === 0 && i % 5 === 0){
+            //push to the array
+            array.push("yu-gi-oh");
+        }
+        //detect values divisible by 2 and 3
+        else if(i % 2 === 0 && i % 3 === 0){
+            array.push("yu-gi");
+        }
+        //detect values divisible by 2 and 5
+        else if(i % 2 === 0 && i % 5 === 0){
+            array.push("yu-oh");
+        }
+        //detect values divisible by 3 and 5
+        else if(i % 3 === 0 && i % 5 === 0){
+            array.push("gi-oh");
+        }
+        //detect values divisible by 2
+        else if(i % 2 === 0){
+            array.push("yu");
+        }
+         //detect values divisible by 3
+         else if(i % 3 === 0){
+            array.push("gi");
+        }
+        //detect values divisible by 5
+        else if(i % 5 === 0){
+            array.push("oh");
+        }
+        else {
+            array.push(i);
+        }
+    }
+    //print array
+    console.log(array);
+    
+}
+
+//call function
+divisible(100);
+divisible(56);
+</script>
+
+</body>
+</html>
